@@ -61,6 +61,10 @@ async function selectMovie(id) {
         voteAvg: jsonResponse.vote_average,
     }
 
+    const newResponse = await fetch(`${apiBaseUrl}/movie/${id}/videos?api_key=${apiKey}`);
+    const newJsonResponse = await newResponse.json();
+    movie.trailerPath = newJsonResponse.results[0].key;
+
     displayMoviePopup(movie);
 }
 
@@ -103,6 +107,7 @@ function displayMoviePopup(movie) {
                 </div>
             </section>
             <p class-"movie-overview">${movie.overview}</p>
+            <iframe id="ytplayer" type="text/html" width="100%" height="250px" src="https://www.youtube.com/embed/${movie.trailerPath}"></iframe>
         </article>
     `;
 
