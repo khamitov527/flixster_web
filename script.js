@@ -1,6 +1,6 @@
 const apiBaseUrl = 'https://api.themoviedb.org/3';
 const imageBaseUrl = 'https://image.tmdb.org/t/p'
-const apiKey = '5446ab24b5c44c62664c314851352fcf';
+const apiKey = 'fd701ec3a1667a9e4812a858f51d1767';
 
 var currentApiPage = 1;
 var activeSearch = false;
