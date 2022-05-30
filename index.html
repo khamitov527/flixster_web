@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🍿 Flixster</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="navbar">
+            <a href="#"><h1 class="header-title">🍿 Flixster</h1></a>
+        
+            <div class="search-wrapper">
+                <form id="search-form" autocomplete="off">
+                    <input type="text" id="search-input" placeholder="Search for Movies" class="search" title="Search Query"/>
+                </form>
+                <button type="button" id="close-search-btn" class="hidden" onclick="closeSearch()"><span class="sr-only">Close</span></button>
+            </div>
+        </div>
+    </header>
+    <main class="main-layout">
+        <section id="movies-section" class="section-layout">
+            <h2>Now playing</h2>
+            <ul id="now-playing-movies" class="movie-list">
+            </ul>
+            <div class="load-more-movies-action">
+                <button id="load-more-movies-btn" onclick="loadMoreMovies()">Load more movies</button>
+            </div>
+        </section>
+        <section id="search-section" class="section-layout hidden">
+            <h2>Search Results</h2>
+            <ul id="movie-search-results" class="movie-list">
+            </ul>
+        </section>
+    </main>
+    <script src="script.js" defer></script>
+</body>
+</html>
